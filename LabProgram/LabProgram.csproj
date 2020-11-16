@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0D2B5A25-609A-4877-93B0-6BDBE9FD8FB2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LabProgram</RootNamespace>
+    <AssemblyName>LabProgram</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gurux.Common, Version=8.1.2002.1903, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gurux.Common.8.1.2002.1903\lib\net35\Gurux.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Gurux.DLMS, Version=9.0.2002.1902, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gurux.DLMS.9.0.2002.1902\lib\net35\Gurux.DLMS.dll</HintPath>
+    </Reference>
+    <Reference Include="Gurux.Net, Version=8.1.2002.1902, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gurux.Net.8.1.2002.1902\lib\net35\Gurux.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Gurux.Serial, Version=8.1.2002.1901, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Gurux.Serial.8.1.2002.1901\lib\net35\Gurux.Serial.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.8\lib\net35-full\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Change_User_PWD_FRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Change_User_PWD_FRM.Designer.cs">
+      <DependentUpon>Change_User_PWD_FRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Add_User_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_User_frm.Designer.cs">
+      <DependentUpon>Add_User_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DAL\DataAccessLayer.cs" />
+    <Compile Include="Helper\StringExtensions.cs" />
+    <Compile Include="Login_frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login_frm.Designer.cs">
+      <DependentUpon>Login_frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\Cls_Global.cs" />
+    <Compile Include="Helper\GXDLMSReader.cs" />
+    <Compile Include="Helper\OpticalViewModel.cs" />
+    <Compile Include="Helper\ReadMeterCardWrapper.cs" />
+    <Compile Include="MainFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFrm.Designer.cs">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MeterDataReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MeterDataReport.Designer.cs">
+      <DependentUpon>MeterDataReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MeterDataModel.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReadControlCardFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadControlCardFRM.Designer.cs">
+      <DependentUpon>ReadControlCardFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadOpticalMeterDataFRM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadOpticalMeterDataFRM.Designer.cs">
+      <DependentUpon>ReadOpticalMeterDataFRM.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadOpticalMeterV2015Frm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadOpticalMeterV2015Frm.Designer.cs">
+      <DependentUpon>ReadOpticalMeterV2015Frm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadOpticalMeterFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadOpticalMeterFrm.Designer.cs">
+      <DependentUpon>ReadOpticalMeterFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReadOpticalMeterDlmsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReadOpticalMeterDlmsFrm.Designer.cs">
+      <DependentUpon>ReadOpticalMeterDlmsFrm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="bin\Debug\Reports\ClientConsumptionFromCollectionCardReport.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Reports\MeterData.rdlc" />
+    <EmbeddedResource Include="bin\Debug\Reports\OpticalMeterData.rdlc">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bin\Debug\Reports\OpticalMeterData1.rdlc" />
+    <EmbeddedResource Include="Change_User_PWD_FRM.resx">
+      <DependentUpon>Change_User_PWD_FRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_User_frm.resx">
+      <DependentUpon>Add_User_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login_frm.resx">
+      <DependentUpon>Login_frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainFrm.resx">
+      <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MeterDataReport.resx">
+      <DependentUpon>MeterDataReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="bin\Debug\LabProgramDB.laccdb" />
+    <None Include="bin\Debug\logs\log.txt-13-02-2020" />
+    <None Include="bin\Debug\logs\log.txt-20-02-2020" />
+    <None Include="bin\Debug\logs\log.txt-23-04-2020" />
+    <None Include="bin\x86\Debug\LabProgram.exe.config" />
+    <None Include="bin\x86\Debug\LabProgram.vshost.exe.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="ReadControlCardFRM.resx">
+      <DependentUpon>ReadControlCardFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadOpticalMeterDataFRM.resx">
+      <DependentUpon>ReadOpticalMeterDataFRM.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadOpticalMeterV2015Frm.resx">
+      <DependentUpon>ReadOpticalMeterV2015Frm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadOpticalMeterFrm.resx">
+      <DependentUpon>ReadOpticalMeterFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReadOpticalMeterDlmsFrm.resx">
+      <DependentUpon>ReadOpticalMeterDlmsFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ClientConsumptionFromCollectionCardReport.rdlc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Release\" />
+    <Folder Include="bin\x86\Debug\bin\Debug\" />
+    <Folder Include="bin\x86\Debug\logs\" />
+    <Folder Include="bin\x86\Debug\Reports\Reports\" />
+    <Folder Include="logs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\LabProgramDB.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="bin\Debug\logs\log.txt" />
+    <Content Include="bin\Debug\ReadMeterCard.dll" />
+    <Content Include="bin\Debug\ReadMeterCardLib.dll" />
+    <Content Include="bin\x86\Debug\4.jpg" />
+    <Content Include="bin\x86\Debug\back.jpg" />
+    <Content Include="bin\x86\Debug\Gurux.Common.dll" />
+    <Content Include="bin\x86\Debug\Gurux.DLMS.dll" />
+    <Content Include="bin\x86\Debug\Gurux.Net.dll" />
+    <Content Include="bin\x86\Debug\Gurux.Serial.dll" />
+    <Content Include="bin\x86\Debug\LabProgram.exe" />
+    <Content Include="bin\x86\Debug\LabProgram.pdb" />
+    <Content Include="bin\x86\Debug\LabProgram.vshost.exe" />
+    <Content Include="bin\x86\Debug\log.txt" />
+    <Content Include="bin\x86\Debug\log4net.dll" />
+    <Content Include="bin\x86\Debug\logo.png" />
+    <Content Include="bin\x86\Debug\Microsoft.ReportViewer.WinForms.dll" />
+    <Content Include="bin\x86\Debug\ReadMeterCard.dll" />
+    <Content Include="bin\x86\Debug\ReadMeterCardLib.dll" />
+    <Content Include="bin\x86\Debug\trace.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
